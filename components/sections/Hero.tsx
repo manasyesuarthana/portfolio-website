@@ -7,7 +7,7 @@ import Squares from "../Squares";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden text-stardust">
+        <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden text-stardust pt-20 md:pt-0">
 
             {/* 1. BACKGROUND GRID */}
             <div className="absolute inset-0 z-0 opacity-100">
@@ -21,7 +21,7 @@ export default function Hero() {
 
                 {/* 2. LEFT COLUMN: THE SWAYING LANYARD CONTAINER */}
                 <div className="flex justify-center lg:justify-end order-last lg:order-first relative">
-                    <div className="relative w-full w-[550px] h-[700px] flex items-center justify-center bg-blue-500/5 border border-blue-500/20 rounded-3xl backdrop-blur-sm overflow-hidden group">
+                    <div className="relative w-full max-w-[550px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center bg-blue-500/5 border border-blue-500/20 rounded-3xl backdrop-blur-sm overflow-hidden group">
                         <div className="absolute top-5 left-5 w-4 h-4 border-t border-l border-white/40 rounded-tl-lg" />
                         <div className="absolute top-5 right-5 w-4 h-4 border-t border-r border-white/40 rounded-tr-lg" />
                         <div className="absolute bottom-5 left-5 w-4 h-4 border-b border-l border-white/40 rounded-bl-lg" />
