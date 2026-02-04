@@ -12,22 +12,42 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-1",
-    title: "3D Portfolio Website",
-    description: "Interactive portfolio with 3D galaxy background and smooth animations",
-    image: "/projects/portfolio.png",
-    tags: ["Next.js", "Three.js", "React", "TypeScript"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "Linux Infrastructure Automation",
+    description: "Bash scripts to set up a linux server in order for it to be able to serve a static site. These scripts are used to automate file transfer, system updates, and the website deployment on the server.",
+    image: "/projects/deployed_website.png",
+    tags: ["CentOS", "Bash", "Vagrant", "Nginx"],
+    github: "https://github.com/manasyesuarthana/automated-server-setup",
+    demo: "https://github.com/manasyesuarthana/automated-server-setup/blob/main/README.md",
     featured: true
   },
   {
     id: "project-2",
-    title: "Real-time Analytics Dashboard",
-    description: "Dashboard for monitoring application performance and user metrics",
-    image: "/projects/dashboard.png",
-    tags: ["React", "Node.js", "WebSocket", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "Automated Algorithm Validation Framework",
+    description: "an Automated Testing Framework to validate the resilience of privacy-preserving algorithms, designing a containerized stress-test environment using Docker and used GitHub Actions for CI/CD.",
+    image: "/projects/pipeline_diagram.jpeg",
+    tags: ["Python", "Docker", "GitHub Actions", "Docker Compose"],
+    github: "https://github.com/manasyesuarthana/AGE-validation-framework",
+    demo: "https://github.com/manasyesuarthana/AGE-validation-framework",
+    featured: true
+  },
+  {
+    id: "project-3",
+    title: "Portfolio Website",
+    description: "A portfolio website (the one you are currently viewing) built with Next.js, Tailwind CSS, and TypeScript.",
+    image: "/projects/portfolio_screenshot.png",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+    github: "https://github.com/manasyesuarthana/portfolio-website",
+    demo: "https://github.com/manasyesuarthana/portfolio-website",
+    featured: true
+  },
+  {
+    id: "project-4",
+    title: "Regulatory Compliance Chatbot",
+    description: "An AI-powered web tool that simplifies regulatory compliance. Upload your PDFs, ask questions, and get instant, accurate answers with direct references to the source documents. It makes finding critical information quick and reliable.",
+    image: "/projects/rag_chatbot.png",
+    tags: ["LangChain", "ChromaDB", "Gemini API"],
+    github: "https://github.com/manasyesuarthana/compliance-rag-chatbot",
+    demo: "https://github.com/manasyesuarthana/compliance-rag-chatbot",
     featured: false
   }
 ];
