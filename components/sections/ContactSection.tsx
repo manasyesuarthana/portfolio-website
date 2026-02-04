@@ -60,7 +60,6 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="bg-black py-20 px-4 relative">
-      {/* Gradient Background */}
       <div className="absolute inset-0 z-0 opacity-30">
         <Particles />
       </div>

@@ -85,9 +85,9 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.1 }}
                     >
-                        <button className="px-8 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-400 transition-colors duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(96,165,250,0.5)]">
+                        {/* <button className="px-8 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-400 transition-colors duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_20px_rgba(96,165,250,0.5)]">
                             View Logs
-                        </button>
+                        </button> */}
                     </motion.div>
                 </div>
 

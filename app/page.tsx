@@ -20,8 +20,8 @@ export default function Home() {
   const navItems = [
     { target: '#hero', label: 'Home' },
     { target: '#tech-stack', label: 'Tech Stack' },
-    { target: '#experience', label: 'Experience' },
     { target: '#education', label: 'Education' },
+    { target: '#experience', label: 'Experience' },
     { target: '#projects', label: 'Projects' },
     { target: '#contact', label: 'Contact' }
   ];
