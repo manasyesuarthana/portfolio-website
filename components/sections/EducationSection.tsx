@@ -20,6 +20,12 @@ const EducationSection = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setVisibleCards((prev) => new Set(prev).add(index));
+            } else {
+              setVisibleCards((prev) => {
+                const next = new Set(prev);
+                next.delete(index);
+                return next;
+              });
             }
           });
         },

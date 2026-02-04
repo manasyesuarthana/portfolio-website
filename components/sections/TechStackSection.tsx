@@ -37,7 +37,7 @@ const TechStackSection = () => {
                 key={key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-900/50 backdrop-blur-sm border border-blue-900/50 rounded-xl p-6 hover:bg-gray-800/50 hover:border-blue-700/50 transition-colors">
                 <h3 className="text-xl font-semibold text-white mb-4 text-center">{category.title}</h3>

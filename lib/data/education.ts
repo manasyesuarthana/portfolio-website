@@ -12,7 +12,7 @@ export const education: EducationItem[] = [
     id: "edu-1",
     degree: "BSc. Computer Science with a Year in Industry",
     institution: "University of Birmingham",
-    logo: "https://universitas21.com/wp-content/uploads/2018/04/1200px-BirminghamUniversityCrest.svg_-31f.png",
+    logo: "/logos/UoB_Logo.png",
     period: "Sep 2025 - Jul 2028",
     achievements: [
       "GPA: Predicted Upper Second Class (2:1)",
@@ -23,7 +23,7 @@ export const education: EducationItem[] = [
     id: "edu-2",
     degree: "Bachelor of Computer Science",
     institution: "Gadjah Mada University",
-    logo: "https://www.eduopinions.com/wp-content/uploads/2019/01/GadjahMadaUniversity-logo.jpg",
+    logo: "/logos/GadjahMadaUniversity-logo.jpg",
     period: "Jul 2023 - Jul 2025",
     achievements: [
       "CGPA: 3.92/4.00",
