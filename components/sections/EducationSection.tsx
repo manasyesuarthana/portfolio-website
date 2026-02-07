@@ -139,8 +139,8 @@ const EducationSection = () => {
             <p className="text-gray-400">Dean's List Semesters</p>
           </div>
           <div className="text-center">
-            <span className="text-white font-bold text-4xl">IDK (I hope its good)</span>
-            <p className="text-gray-400">Final GPA</p>
+            <span className="text-white font-bold text-4xl">3.92/4.00</span>
+            <p className="text-gray-400">Current GPA</p>
           </div>
         </div>
 
