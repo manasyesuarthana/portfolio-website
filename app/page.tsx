@@ -154,7 +154,7 @@ export default function Home() {
           />
         ) : (
           <BlurText
-            text="Wanna see something cool?"
+            text="Introducing..."
             delay={150}
             animateBy="words"
             direction="top"

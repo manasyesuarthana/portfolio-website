@@ -37,22 +37,22 @@ const ContactSection = () => {
 
   const socialLinks = [
     {
-      link: 'https://github.com/yourusername',
+      link: 'https://github.com/manasyesuarthana',
       text: 'GitHub',
       marqueeBgColor: '#939393ff'
     },
     {
-      link: 'https://linkedin.com/in/yourusername',
+      link: 'https://www.linkedin.com/in/i-putu-herjuna-manasye-suarthana-6a1b93294/',
       text: 'LinkedIn',
       marqueeBgColor: '#0A66C2'
     },
     {
-      link: 'https://instagram.com/yourusername',
+      link: 'https://instagram.com/manasyesuarthana',
       text: 'Instagram',
       marqueeBgColor: '#C13584'
     },
     {
-      link: 'mailto:contact@example.com',
+      link: 'mailto:manasyesuarthana@gmail.com',
       text: 'Email',
       marqueeBgColor: '#EA4335'
     }
@@ -72,7 +72,7 @@ const ContactSection = () => {
             />
 
           </h1>
-        </div>
+        </div>com
         <FlowingMenu
           items={socialLinks}
           speed={15}
