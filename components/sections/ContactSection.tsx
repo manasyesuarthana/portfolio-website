@@ -87,7 +87,7 @@ const ContactSection = () => {
       <footer className="mt-20 pt-8 border-t border-gray-800">
         <div className="text-center">
           <p className="text-gray-400 mb-4">
-            © 2026 Manasye Suarthana. Built with passion and lots of ☕ with Next.js
+            © 2026 Manasye Suarthana. Built with passion and lots of ☕.
           </p>
           <div className="flex justify-center gap-6">
             <Magnet magnetStrength={1.5}>
