@@ -7,7 +7,7 @@ import Squares from "../Squares";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center bg-black overflow-hidden text-stardust pt-20 md:pt-0">
+        <section className="relative w-full min-h-screen flex items-center justify-center bg-black text-stardust pt-20 md:pt-0">
 
             {/* 1. BACKGROUND GRID */}
             <div className="absolute inset-0 z-0 opacity-100">
@@ -20,7 +20,7 @@ export default function Hero() {
             <div className="container mx-auto px-6 z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
 
                 {/* 2. LEFT COLUMN: THE SWAYING LANYARD CONTAINER */}
-                <div className="flex justify-center lg:justify-end order-last lg:order-first relative">
+                <div className="flex justify-center lg:justify-end order-last lg:order-first relative overflow-visible z-20">
                     <div className="relative w-full max-w-[550px] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center bg-blue-500/5 border border-blue-500/20 rounded-3xl backdrop-blur-sm group">
                         <div className="absolute top-5 left-5 w-4 h-4 border-t border-l border-white/40 rounded-tl-lg" />
                         <div className="absolute top-5 right-5 w-4 h-4 border-t border-r border-white/40 rounded-tr-lg" />
@@ -31,14 +31,15 @@ export default function Hero() {
                         </div>
 
                         {/* The Lanyard Component */}
-                        <div className="w-full h-full z-10 cursor-grab active:cursor-grabbing overflow-hidden">
-                            <Lanyard
-                                position={[2.5, 0, 11]}
-                                gravity={[0, -40, 0]}
-                                fov={25}
-                                transparent={true}
-                            />
-                        </div>
+                        {/* <div className="w-full h-full z-10 cursor-grab active:cursor-grabbing overflow-hidden"> */}
+                        <Lanyard
+                            // position={[2.5, 0, 11]} // for tablets
+                            position={[0, 0, 10]}
+                            gravity={[0, -40, 0]}
+                            fov={30}
+                            transparent={true}
+                        />
+                        {/* </div> */}
 
                         {/* DECORATION: Subtle Scanline (Optional, adds to the screen feel) */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] opacity-10 pointer-events-none" />
