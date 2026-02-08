@@ -34,7 +34,7 @@ export const education: EducationItem[] = [
     id: "Coming Soon...",
     degree: "Master's Degree",
     institution: "Coming Soon...",
-    logo: "https://cdn.creazilla.com/emojis/46760/white-question-mark-emoji-clipart-xl.png",
+    logo: "/logos/question-mark.png",
     period: "Not Started Yet.",
     achievements: [
       "Coming Soon...",
