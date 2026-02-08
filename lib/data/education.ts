@@ -10,10 +10,10 @@ export interface EducationItem {
 export const education: EducationItem[] = [
   {
     id: "edu-1",
-    degree: "BSc. Computer Science with a Year in Industry",
+    degree: "BSc. Computer Science",
     institution: "University of Birmingham",
     logo: "/logos/UoB_Logo.png",
-    period: "Sep 2025 - Jul 2028",
+    period: "Sep 2025 - Present",
     achievements: [
       "GPA: Predicted Upper Second Class (2:1)",
       "Direct Entry to Year 2 via Dual Degree Scholarship."
