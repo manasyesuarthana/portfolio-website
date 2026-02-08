@@ -116,7 +116,7 @@ const ProjectsSection = () => {
   );
 
   return (
-    <section id="projects" className="min-h-screen bg-black py-20 px-4 relative overflow-hidden">
+    <section id="projects" className="min-h-screen bg-black py-20 px-4 relative">
       {/* Dark to Light Transition Gradient at Top */}
       <div
         className="absolute top-0 left-0 right-0 h-48 z-10 pointer-events-none"
