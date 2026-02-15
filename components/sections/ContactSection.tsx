@@ -6,6 +6,7 @@ import FlowingMenu from '../FlowingMenu';
 import SplitText from '../SplitText';
 import Particles from '../Particles';
 import { scrollToSection } from '../SmoothScroll';
+import ScrollVelocity from '../ScrollVelocity';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -82,6 +83,10 @@ const ContactSection = () => {
           marqueeTextColor="#000000"
           borderColor="#333"
         />
+
+        <br />
+        <br />
+        <ScrollVelocity texts={['Thanks for visiting!']} className="text-white text-4xl" />
       </div>
       {/* Footer */}
       <footer className="mt-20 pt-8 border-t border-gray-800">

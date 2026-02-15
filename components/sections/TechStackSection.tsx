@@ -16,7 +16,6 @@ const TechStackSection = () => {
 
   return (
     <section id="tech-stack" className="min-h-screen bg-black py-20 px-4 relative">
-      {/* GradientBlinds Background */}
 
       <div className="absolute inset-0 z-0 opacity-30">
         <Particles />

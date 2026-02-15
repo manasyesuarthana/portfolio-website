@@ -173,7 +173,6 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-      <ScrollVelocity texts={['Thanks for visiting!']} className="text-white text-4xl" />
     </section>
   );
 };

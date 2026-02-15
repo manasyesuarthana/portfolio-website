@@ -8,6 +8,7 @@ import TechStackSection from '../components/sections/TechStackSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import EducationSection from '../components/sections/EducationSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
+import AwardsSection from '../components/sections/AwardsSection';
 import ContactSection from '../components/sections/ContactSection';
 import GradualBlur from '../components/GradualBlur';
 import { scrollToSection } from '../components/SmoothScroll';
@@ -23,6 +24,7 @@ export default function Home() {
     { target: '#education', label: 'Education' },
     { target: '#experience', label: 'Experience' },
     { target: '#projects', label: 'Projects' },
+    { target: '#awards', label: 'Awards' },
     { target: '#contact', label: 'Contact' }
   ];
 
@@ -118,6 +120,7 @@ export default function Home() {
         <EducationSection />
         <ExperienceSection />
         <ProjectsSection />
+        <AwardsSection />
         <ContactSection />
 
         <GradualBlur
