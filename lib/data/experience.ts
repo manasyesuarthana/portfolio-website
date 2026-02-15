@@ -23,7 +23,7 @@ export const experience: ExperienceItem[] = [
     id: "exp-2",
     role: "Core Team - Activation (Technical Project Manager)",
     company: "Google Developer Groups on Campus, Gadjah Mada University",
-    logo: "/logos/digital-agency.png",
+    logo: "",
     period: "Oct 2024 - Aug 2025",
     highlights: [
       "Coordinated with 20 Core Team members to deliver technical learning experiences for 60+ community members.",
@@ -35,7 +35,7 @@ export const experience: ExperienceItem[] = [
     id: "exp-3",
     role: "Member & Vice Head of Gadjah Mada Cyber Alliance",
     company: "KOMATIK UGM (Information Technology Student Community, Gadjah Mada University)",
-    logo: "/logos/digital-agency.png",
+    logo: "",
     period: "Feb 2024 - Aug 2025",
     highlights: [
       "Analyzed security gaps in web applications and delivered structured presentations during weekly training sessions to teach common web vulnerabilities to 50+ community members, enhancing team-wide understanding of secure development practices.",

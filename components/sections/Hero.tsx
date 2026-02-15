@@ -67,7 +67,7 @@ export default function Hero() {
                         transition={{ delay: 0.7 }}
                         className="text-5xl lg:text-7xl font-bold tracking-tighter text-white"
                     >
-                        I'm Manasye.<br />
+                        I'm Manasye Suarthana.<br />
                         <RotatingText
                             texts={['Software Engineer.', 'DevOps Engineer.', 'Security Engineer.', 'CS @ Birmingham.']}
                             mainClassName="px-2 sm:px-2 md:px-3 bg-blue-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 rounded-lg mt-2 inline-block"
