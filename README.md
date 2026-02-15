@@ -1,6 +1,6 @@
 # Manasye's Portfolio
 
-A personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. Features a dark-themed design with interactive animations, smooth scrolling, and 3D elements.
+A personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. Features a dark-themed design with interactive animations, smooth scrolling, 3D elements, and an interactive simulated terminal.
 
 **Live site:** [manasyesuarthana.com](https://manasyesuarthana-portfolio.vercel.app)
 
@@ -31,6 +31,7 @@ A personal portfolio website built with Next.js, React, TypeScript, and Tailwind
 │   │   ├── ExperienceSection.tsx
 │   │   ├── ProjectsSection.tsx
 │   │   ├── AwardsSection.tsx
+│   │   ├── TerminalSection.tsx
 │   │   └── ContactSection.tsx
 │   │
 │   └── *.tsx               # Reusable UI/animation components (React Bits, etc.)
@@ -42,7 +43,8 @@ A personal portfolio website built with Next.js, React, TypeScript, and Tailwind
 │       ├── experience.ts   # Work/org experience entries
 │       ├── projects.ts     # Project entries
 │       ├── awards.ts       # Awards & honors entries
-│       └── skills.ts       # Tech stack / skills
+│       ├── skills.ts       # Tech stack / skills
+│       └── filesystem.ts   # Virtual filesystem for the terminal
 │
 └── public/
     ├── logos/              # Institution and company logos
@@ -61,9 +63,12 @@ The site loads with a short intro animation ("Hello, World!" → "Introducing...
 | **Experience** | Work and organizational experience in a selectable animated list |
 | **Projects** | Featured projects in an autoplay carousel with tags, links, and screenshots |
 | **Awards** | Awards and honors displayed in a responsive card grid |
+| **Terminal** | Interactive simulated shell with commands like `ls`, `cat`, `cd`, `neofetch`, and easter eggs |
 | **Contact** | Social links via a flowing menu, footer with back-to-top |
 
 Each section uses a consistent dark theme with glassmorphism cards (`bg-gray-900/50 backdrop-blur-sm`), scroll-triggered animations, and either a Particles or LightRays background.
+
+> **Note:** The site is designed for tablet and desktop screens (768px+). Mobile visitors see a friendly message asking them to switch to a larger device.
 
 ## Data Model
 
