@@ -69,7 +69,7 @@ const ContactSection = () => {
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
             <SplitText
-              text="Let's Connect!"
+              text="That's all for now! Let's Connect:"
             />
 
           </h1>
@@ -86,7 +86,7 @@ const ContactSection = () => {
 
         <br />
         <br />
-        <ScrollVelocity texts={['Thanks for visiting!']} className="text-white text-4xl" />
+        <ScrollVelocity texts={['Thanks for stopping by!']} className="text-white text-4xl" />
       </div>
       {/* Footer */}
       <footer className="mt-20 pt-8 border-t border-gray-800">
