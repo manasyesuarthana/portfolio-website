@@ -43,7 +43,7 @@ export const awards: AwardItem[] = [
     {
         id: "award-5",
         title: "Best Staff",
-        issuer: "Student Executive Board of Information Technology Student Community (BEM KOMATIK UGM)",
+        issuer: "Student Executive Board of Faculty of Mathematics and Natural Sciences (BEM KM FMIPA UGM)",
         date: "2024",
         description: "Awarded 'Best Staff' for outstanding contribution, leadership, and dedication during the 2023/2024 term, recognized for excellence in teamwork and organizational impact.",
         icon: "🎖️"

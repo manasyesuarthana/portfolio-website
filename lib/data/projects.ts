@@ -49,5 +49,15 @@ export const projects: Project[] = [
     github: "https://github.com/manasyesuarthana/compliance-rag-chatbot",
     demo: "https://github.com/manasyesuarthana/compliance-rag-chatbot",
     featured: false
+  },
+  {
+    id: "project-5",
+    title: "Deploying OpenWebUI on AWS, GCP, and Azure with Terraform",
+    description: "Hands on learning project of using IaC (Infrastructure as Code) with Terraform automate the deployment of OpenWebUI on AWS, GCP, and Azure VM instances.",
+    image: "/projects/openwebui_terraform.jpg",
+    tags: ["Terraform", "OpenWebUI", "Cloud Computing"],
+    github: "https://github.com/manasyesuarthana/openwebui-terraform-labs",
+    demo: "https://github.com/manasyesuarthana/openwebui-terraform-labs",
+    featured: false
   }
 ];
