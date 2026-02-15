@@ -18,6 +18,14 @@ export default function Home() {
   const [view, setView] = useState<'intro' | 'question' | 'fullsite'>('intro');
   const [showIntro, setShowIntro] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   const navItems = [
     { target: '#hero', label: 'Home' },
@@ -53,6 +61,21 @@ export default function Home() {
       clearTimeout(sequenceTimer);
     };
   }, [view]);
+
+  const mobileGate = (
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-8 text-center">
+      <p className="text-5xl mb-6">🖥️</p>
+      <h1 className="text-2xl font-bold text-white mb-4">Desktop Only</h1>
+      <p className="text-gray-400 leading-relaxed max-w-sm">
+        Sorry! This site is best experienced on a tablet or larger screen. Please visit on your laptop, desktop, or tablet to see the full portfolio.
+      </p>
+      <div className="mt-8 px-4 py-2 border border-gray-700 rounded-lg text-gray-500 text-sm font-mono">
+        min-width: 768px required
+      </div>
+    </div>
+  );
+
+  if (isMobile) return mobileGate;
 
   if (view === 'fullsite') {
     return (

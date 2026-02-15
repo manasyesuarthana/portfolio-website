@@ -43,6 +43,16 @@ export default function Hero() {
 
                         {/* DECORATION: Subtle Scanline (Optional, adds to the screen feel) */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] opacity-10 pointer-events-none" />
+
+                        {/* Hint text */}
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 2, duration: 1 }}
+                            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[11px] text-white/40 font-mono tracking-wide whitespace-nowrap pointer-events-none"
+                        >
+                            ↕ Try dragging the lanyard around!
+                        </motion.p>
                     </div>
 
                 </div>
