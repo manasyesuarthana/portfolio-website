@@ -133,18 +133,33 @@ const TerminalSection = () => {
         scrollToBottom();
     }, [output, scrollToBottom]);
 
-    // Prevent Lenis smooth scroll from hijacking wheel events inside the terminal
-    const handleTerminalWheel = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
-        e.stopPropagation();
+    // Focus-based scroll trapping: click terminal to trap, click outside to release
+    const [focused, setFocused] = useState(false);
+    const terminalWrapperRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (terminalWrapperRef.current && !terminalWrapperRef.current.contains(e.target as Node)) {
+                setFocused(false);
+                window.lenis?.start();
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
-    const handleMouseEnter = useCallback(() => {
+    const handleTerminalClick = useCallback(() => {
+        setFocused(true);
         window.lenis?.stop();
+        inputRef.current?.focus();
     }, []);
 
-    const handleMouseLeave = useCallback(() => {
-        window.lenis?.start();
-    }, []);
+    // Only trap scroll when terminal is focused
+    const handleTerminalWheel = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
+        if (focused) {
+            e.stopPropagation();
+        }
+    }, [focused]);
 
     const executeCommand = useCallback((cmd: string) => {
         const trimmed = cmd.trim();
@@ -328,10 +343,6 @@ const TerminalSection = () => {
         }
     };
 
-    const focusInput = () => {
-        inputRef.current?.focus();
-    };
-
     return (
         <section id="terminal" className="min-h-screen bg-black py-20 px-4 relative">
             <div className="max-w-4xl mx-auto relative z-10">
@@ -341,8 +352,9 @@ const TerminalSection = () => {
 
                 {/* Terminal Window */}
                 <div
+                    ref={terminalWrapperRef}
                     className="rounded-xl overflow-hidden border border-blue-500/30 shadow-[0_0_30px_rgba(59,130,246,0.3),0_0_60px_rgba(59,130,246,0.15)]"
-                    onClick={focusInput}
+                    onClick={handleTerminalClick}
                 >
                     {/* Title Bar */}
                     <div className="bg-gray-800 px-4 py-3 flex items-center gap-2 border-b border-gray-700">
@@ -360,8 +372,6 @@ const TerminalSection = () => {
                     <div
                         ref={outputRef}
                         onWheel={handleTerminalWheel}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
                         className="bg-gray-950 p-4 md:p-6 font-mono text-sm md:text-base h-[500px] overflow-y-auto cursor-text [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-white/60"
                         style={{ scrollBehavior: 'smooth', overscrollBehavior: 'contain' }}
                     >
@@ -401,6 +411,9 @@ const TerminalSection = () => {
 
                 <p className="text-gray-500 text-center text-sm mt-6">
                     Click on the terminal and type &quot;help&quot; to get started.
+                </p>
+                <p className="text-gray-500 text-center text-sm mt-6">
+                    To get back to scrolling the main page, click anywhere else on the page.
                 </p>
 
                 <br />
