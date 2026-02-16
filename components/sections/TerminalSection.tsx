@@ -121,13 +121,30 @@ const TerminalSection = () => {
 
     const scrollToBottom = useCallback(() => {
         if (outputRef.current) {
-            outputRef.current.scrollTop = outputRef.current.scrollHeight;
+            const el = outputRef.current;
+            const isNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 100;
+            if (isNearBottom) {
+                el.scrollTop = el.scrollHeight;
+            }
         }
     }, []);
 
     useEffect(() => {
         scrollToBottom();
     }, [output, scrollToBottom]);
+
+    // Prevent Lenis smooth scroll from hijacking wheel events inside the terminal
+    const handleTerminalWheel = useCallback((e: React.WheelEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+    }, []);
+
+    const handleMouseEnter = useCallback(() => {
+        window.lenis?.stop();
+    }, []);
+
+    const handleMouseLeave = useCallback(() => {
+        window.lenis?.start();
+    }, []);
 
     const executeCommand = useCallback((cmd: string) => {
         const trimmed = cmd.trim();
@@ -342,8 +359,11 @@ const TerminalSection = () => {
                     {/* Terminal Body */}
                     <div
                         ref={outputRef}
+                        onWheel={handleTerminalWheel}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
                         className="bg-gray-950 p-4 md:p-6 font-mono text-sm md:text-base h-[500px] overflow-y-auto cursor-text [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/40 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-white/60"
-                        style={{ scrollBehavior: 'smooth' }}
+                        style={{ scrollBehavior: 'smooth', overscrollBehavior: 'contain' }}
                     >
                         {/* Output Lines */}
                         {output.map((line, i) => (
