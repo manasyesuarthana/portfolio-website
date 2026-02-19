@@ -52,9 +52,9 @@ export const projects: Project[] = [
   },
   {
     id: "project-5",
-    title: "Deploying OpenWebUI on AWS, GCP, and Azure with Terraform",
+    title: "Deploying OpenWebUI on AWS and GCP using Terraform",
     description: "Hands on learning project of using IaC (Infrastructure as Code) with Terraform automate the deployment of OpenWebUI on AWS, GCP, and Azure VM instances.",
-    image: "/projects/openwebui_terraform.jpg",
+    image: "/projects/terraform_aws_gcp.png",
     tags: ["Terraform", "OpenWebUI", "Cloud Computing"],
     github: "https://github.com/manasyesuarthana/openwebui-terraform-labs",
     demo: "https://github.com/manasyesuarthana/openwebui-terraform-labs",
